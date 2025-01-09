@@ -1,27 +1,25 @@
 //import liraries
-import React, { Component } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
-import navigationString from '../../constants/navigationString';
+import React from 'react';
+import { View, Text,  ImageBackground, TextInput } from 'react-native';
+import styles from './styles';
+import TextInputWithLabel from '../../Components/TextInputWithLabel';
 
 // create a component
 const Login = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Button title="Register" onPress={() => navigation.navigate(navigationString.REGISTER)}/>>
-            <Text>Login</Text>
+            <ImageBackground source={{ uri:'https://anakoskaphotography.com/wp-content/uploads/2018/09/professional-picture-of-a-cute-baby-boy-in-white.jpg' }}
+            style={styles.imgStyle}
+            >
+
+            <Text style={styles.loginTextStyle}>Login</Text>
+            </ImageBackground>
+
+            <View style={styles.mainStyle}>
+                <TextInputWithLabel label='Email Address' placeholder='Enter your email address' />
+            </View>
         </View>
     );
 };
-
-// define your styles
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#2c3e50',
-    },
-});
-
 //make this component available to the app
 export default Login;
