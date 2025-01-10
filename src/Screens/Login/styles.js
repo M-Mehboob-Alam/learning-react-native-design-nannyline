@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     },
     mainStyle:{
         paddingHorizontal: moderateScale(24),
-        paddingVertical: moderateVerticalScale(44),
+        // paddingVertical: moderateVerticalScale(44),
     }
    
 });

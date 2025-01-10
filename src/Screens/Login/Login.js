@@ -3,6 +3,7 @@ import React from 'react';
 import { View, Text,  ImageBackground, TextInput } from 'react-native';
 import styles from './styles';
 import TextInputWithLabel from '../../Components/TextInputWithLabel';
+import { moderateVerticalScale } from 'react-native-size-matters';
 
 // create a component
 const Login = ({navigation}) => {
@@ -16,7 +17,14 @@ const Login = ({navigation}) => {
             </ImageBackground>
 
             <View style={styles.mainStyle}>
-                <TextInputWithLabel label='Email Address' placeholder='Enter your email address' />
+                <TextInputWithLabel label='Email Address' placeholder='Enter your email address'
+                inputStyle={{ marginBottom: moderateVerticalScale(28) }} keybordType="email-address"  />
+            </View>
+            <View style={styles.mainStyle}>
+                <TextInputWithLabel label='Password' placeholder='Enter your password'
+                keybordType="password" secureTextEntry={true}
+                 />
+                 
             </View>
         </View>
     );
